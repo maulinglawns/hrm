@@ -14,8 +14,9 @@ Cargo.toml                                        Y  D   H  M  S
 Written to complement both `ls -l` and `stat`, both shows the actual _time_ od the last modification, but not the _elapsed_ time.
 
 # Documentation
-<pre>
-hrm 0.0.1
+
+```
+hrm 0.1.0
 Magnus Wallin <magnuswallin@tutanota.com>
 
 hrm: human readable mtime
@@ -55,4 +56,4 @@ FLAGS:
 
 ARGS:
     <TARGET>    Target file or directory
-</pre>
+```
