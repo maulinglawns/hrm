@@ -11,7 +11,7 @@ Cargo.toml                                        Y  D   H  M  S
 -----------------------------------------------------------------
                                                   0  1   23 16 56 
 </pre>
-Written to complement both `ls -l` and `stat`, both shows the actual _time_ od the last modification, but not the _elapsed_ time.
+Written to complement both `ls -l` and `stat`, both shows the actual _time_ of the last modification, but not the _elapsed_ time.
 
 # Documentation
 
