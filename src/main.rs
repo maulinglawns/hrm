@@ -91,9 +91,15 @@ NOTES:
                            .help("Target file or directory")
                            .required(true)
                            .index(1))
+                      .arg(Arg::with_name("d")
+                           .short("d")
+                           .long("sort_desc")
+                           .help("Sort output from dir in sort_descending order."))
                       .get_matches();
 
     let infile = matches.value_of("TARGET").unwrap();
+    
+    let sort_desc = matches.occurrences_of("d");
 
     // Check that we have a valid path
     if std::fs::metadata(&infile).is_err() {
@@ -158,8 +164,13 @@ NOTES:
             std::process::exit(0);
         }
         
-        // Sort vector, ascending (default)
-        file_mtime.sort_by(|&(_, a), &(_, b)| a.cmp(&b));
+        if sort_desc == 1 {
+            // If 'd' flag is used, sort in descending order
+            file_mtime.sort_by(|&(_, a), &(_, b)| b.cmp(&a));
+        } else {
+            // Sort vector, ascending (default)
+            file_mtime.sort_by(|&(_, a), &(_, b)| a.cmp(&b));
+        }
         
         // Print header
         println!("{: <50}{}", "DIR: ", "AGE:");
