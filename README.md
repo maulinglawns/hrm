@@ -44,16 +44,18 @@ EXAMPLES:
     
 NOTES:
     When running on a directory, files/directories are sorted in ascending 
-    order as default.
+    order as default. If you want descending order, use the -d flag.
     Directories are denoted by a '/' at the end of the name.
 
 USAGE:
-    hrm <TARGET>
+    hrm [FLAGS] <TARGET>
 
 FLAGS:
-    -h, --help       Prints help information
-    -V, --version    Prints version information
+    -d, --sort_desc    Sort output from directory in descending order.
+    -h, --help         Prints help information
+    -V, --version      Prints version information
 
 ARGS:
     <TARGET>    Target file or directory
+
 ```
