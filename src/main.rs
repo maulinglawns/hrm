@@ -78,7 +78,7 @@ EXAMPLES:
     
 NOTES:
     When running on a directory, files/directories are sorted in ascending 
-    order as default.
+    order as default. If you want descending order, use the -d flag.
     Directories are denoted by a '/' at the end of the name.
 ";
     
@@ -94,7 +94,7 @@ NOTES:
                       .arg(Arg::with_name("d")
                            .short("d")
                            .long("sort_desc")
-                           .help("Sort output from dir in sort_descending order."))
+                           .help("Sort output from directory in descending order."))
                       .get_matches();
 
     let infile = matches.value_of("TARGET").unwrap();
